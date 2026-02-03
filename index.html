@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Brisas de oro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <svg class="corona-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Base de la corona -->
+            <rect x="10" y="60" width="180" height="15" fill="darkgoldenrod" rx="3"/>
+            <!-- Puntas de la corona -->
+            <polygon points="50,60 40,20 60,40 70,10 80,50 100,5 120,50 130,10 140,40 160,20 150,60" fill="darkgoldenrod"/>
+            <!-- Gemas/piedras preciosas -->
+            <circle cx="70" cy="30" r="4" fill="#FFD700"/>
+            <circle cx="100" cy="10" r="5" fill="#FFD700"/>
+            <circle cx="130" cy="30" r="4" fill="#FFD700"/>
+        </svg>
+        <div class="logo">brisas de oro</div>
+        <p>Descansa como te lo mereces</p>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#quienes">Quiénes Somos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="descripcion">
+        <div class="descripcion-content">
+            <h2>Bienvenido a Brisas de Oro</h2>
+            <p>Somos un hotel boutique de lujo ubicado en el corazón del paraíso. Oferecemos una experiencia única donde la elegancia, comodidad y atención personalizada se combinan para crear momentos inolvidables.</p>
+            
+            <div class="comodidades">
+                <h3>Nuestras Comodidades</h3>
+                <div class="comodidades-grid">
+                    <div class="comodidad">
+                        <span class="icono">🏊</span>
+                        <p>Piscina Infinity</p>
+                    </div>
+                    <div class="comodidad">
+                        <span class="icono">🍽️</span>
+                        <p>Restaurante Gourmet</p>
+                    </div>
+                    <div class="comodidad">
+                        <span class="icono">💆</span>
+                        <p>Spa y Masajes</p>
+                    </div>
+                    <div class="comodidad">
+                        <span class="icono">🏋️</span>
+                        <p>Gimnasio</p>
+                    </div>
+                    <div class="comodidad">
+                        <span class="icono">📚</span>
+                        <p>Biblioteca</p>
+                    </div>
+                    <div class="comodidad">
+                        <span class="icono">🎭</span>
+                        <p>Entretenimiento Nocturno</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="habitaciones">
+        <h2>Nuestras Habitaciones</h2>
+
+        <div class="card">
+            <div class="foto-habitacion">
+                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop" alt="Habitación Sencilla">
+            </div>
+            <h3>Habitación Sencilla</h3>
+            <p>Cama Doble · Baño privado sauna</p>
+            <p class="precio">$700.000 /1 noche</p>
+        </div>
+
+        <div class="card">
+            <div class="foto-habitacion">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop" alt="Habitación Doble">
+            </div>
+            <h3>Habitación Doble</h3>
+            <p>2 camas · Aire acondicionado</p>
+            <p class="precio">550.000 / noche</p>
+        </div>
+    </section>
+
+    <section class="reserva">
+        <h2>Reservar</h2>
+
+        <form id="formReserva">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo" required>
+
+            <select required>
+                <option value="">Tipo de habitación</option>
+                <option>Sencilla</option>
+                <option>Doble</option>
+            </select>
+
+            <label>Fecha de entrada</label>
+            <input type="date" required>
+
+            <label>Fecha de salida</label>
+            <input type="date" required>
+
+            <button type="submit">Reservar ahora</button>
+        </form>
+
+        <p id="mensaje"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
