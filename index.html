@@ -7,6 +7,10 @@
 </head>
 <body>
 
+    
+
+    
+
     <header>
         <svg class="corona-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
             <!-- Base de la corona -->
@@ -18,103 +22,552 @@
             <circle cx="100" cy="10" r="5" fill="#FFD700"/>
             <circle cx="130" cy="30" r="4" fill="#FFD700"/>
         </svg>
+        <div class="estrellas-corona">⭐⭐⭐⭐⭐</div>
         <div class="logo">brisas de oro</div>
         <p>Descansa como te lo mereces</p>
 
         <nav class="navbar">
             <ul>
                 <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#quienes">Quiénes Somos</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="barra-oferta">
+        <div class="oferta-contenido">
+            <span class="icono-oferta">🎉</span>
+            <p class="texto-oferta">
+                <strong>¡OFERTA ESPECIAL!</strong> Reserva ahora y obtén <span class="descuento">20% de descuento</span> en tu primera noche + desayuno gratis
+            </p>
+            <span class="icono-oferta">🎉</span>
+        </div>
+        <button class="cerrar-oferta">&times;</button>
+    </div>
+
+    <!-- SECCIÓN DE BÚSQUEDA DE DISPONIBILIDAD -->
+    <section class="buscador-disponibilidad">
+        <div class="buscador-contenedor">
+            <h2>Busca tu Habitación Ideal</h2>
+            <form class="formulario-buscador" id="formBuscador">
+                <div class="grupo-entrada">
+                    <label for="checkIn">Check-In</label>
+                    <input type="date" id="checkIn" name="checkIn" required>
+                </div>
+                
+                <div class="grupo-entrada">
+                    <label for="checkOut">Check-Out</label>
+                    <input type="date" id="checkOut" name="checkOut" required>
+                </div>
+                
+                <div class="grupo-entrada">
+                    <label for="huespedes">Huéspedes</label>
+                    <select id="huespedes" name="huespedes" required>
+                        <option value="">Selecciona</option>
+                        <option value="1">1 Huésped</option>
+                        <option value="2">2 Huéspedes</option>
+                        <option value="3">3 Huéspedes</option>
+                        <option value="4">4 Huéspedes</option>
+                        <option value="5">5+ Huéspedes</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-buscar">🔍 Buscar Disponibilidad</button>
+            </form>
+            <p id="mensajeBuscador" class="mensaje-buscador"></p>
+            
+            <!-- Contenedor de habitaciones disponibles -->
+            <div id="habitacionesDisponibles" class="habitaciones-disponibles" style="display: none;">
+                <h3>Habitaciones Disponibles</h3>
+                <div id="listaHabitaciones" class="lista-habitaciones-grid">
+                    <!-- Se llenará dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="descripcion">
         <div class="descripcion-content">
             <h2>Bienvenido a Brisas de Oro</h2>
-            <p>Somos un hotel boutique de lujo ubicado en el corazón del paraíso. Oferecemos una experiencia única donde la elegancia, comodidad y atención personalizada se combinan para crear momentos inolvidables.</p>
+            <p id="quienes-somos">Somos un hotel boutique de lujo ubicado en el corazón del paraíso. Oferecemos una experiencia única donde la elegancia, comodidad y atención personalizada se combinan para crear momentos inolvidables.</p>
             
             <div class="comodidades">
                 <h3>Nuestras Comodidades</h3>
                 <div class="comodidades-grid">
                     <div class="comodidad">
-                        <span class="icono">🏊</span>
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/eb/1f/cb/outdoor-pool.jpg?w=1200&h=-1&s=1" alt="Piscina" class="img-comodidad">
                         <p>Piscina Infinity</p>
                     </div>
                     <div class="comodidad">
-                        <span class="icono">🍽️</span>
+                        <img src="https://www.turium.es/wp-content/uploads/sites/4/2025/01/restaurantes-hoteles-cinco-estrellas-1200x853.jpg" alt="Restaurante Gourmet" class="img-comodidad">
                         <p>Restaurante Gourmet</p>
                     </div>
                     <div class="comodidad">
-                        <span class="icono">💆</span>
+                        <img src="https://www.wellnesspamovil.com/wp-content/uploads/2023/01/wellness.jpg" alt="Spa y Masajes" class="img-comodidad">
                         <p>Spa y Masajes</p>
                     </div>
                     <div class="comodidad">
-                        <span class="icono">🏋️</span>
+                        <img src="https://etenonfitness.com/wp-content/uploads/2023/04/Novotel-Shanghai-Clover-Star-Trac.jpg" alt="Gimnasio" class="img-comodidad">
                         <p>Gimnasio</p>
                     </div>
                     <div class="comodidad">
-                        <span class="icono">📚</span>
+                        <img src="https://media.admagazine.com/photos/6585f094b83aa25ed6cd5397/master/w_1600%2Cc_limit/Library%2520Hotel.jpg" alt="Biblioteca" class="img-comodidad">
                         <p>Biblioteca</p>
                     </div>
                     <div class="comodidad">
-                        <span class="icono">🎭</span>
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200" alt="Entretenimiento Nocturno" class="img-comodidad">
                         <p>Entretenimiento Nocturno</p>
+                    </div>
+                    <div class="comodidad">
+                        <img src="https://seaga.com/wp-content/uploads/2025/05/blog2Fcovers2F1746144668544_modern-upscale-laundromat-with-luxurious-seating-sleek-scaled.jpg" alt="Lavandería" class="img-comodidad">
+                        <p>Servicio de Lavandería</p>
+                    </div>
+                     <div class="comodidad">
+                        <img src="https://www.chiquimadrid.es/wp-content/uploads/2024/06/multiaventuras-moratalaz-parque-de-bolas.jpg" alt="parque-infantil" class="img-comodidad">
+                        <p> parque-infantil</p>
+                    </div>
+                    <div class="comodidad">
+                        <img src="https://www.hola.com/horizon/original_aspect_ratio/418444d22b2b-cnema-hotel-dame-des-arts-a.jpg" alt="sala de cine" class="img-comodidad">
+                        <p>sala de Cine</p>
+                    </div>
+                    <div class="comodidad">
+                        <img src="https://www.doylecollection.com/var/doyle/storage/images/media/the-sideline-at-the-croke-park-hotel/805715-1-eng-US/the-sideline-at-the-croke-park-hotel_rect719.jpg" alt="barra-licor" class="img-comodidad">
+                        <p>  barra-licor</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="habitaciones">
-        <h2>Nuestras Habitaciones</h2>
+   <section class="habitaciones">
+    <h2>Nuestras Habitaciones</h2>
+
+    <div class="contenedor-cards">
 
         <div class="card">
             <div class="foto-habitacion">
-                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=300&fit=crop" alt="Habitación Sencilla">
+                <img src="./img/interior-dormitorio-lujo-muebles-ricos-vistas-panoramicas-cubierta-huelga_1258-111483.avif" alt="">
+            </div>
+            <h3>Habitación Pen House</h3>
+            <p>Cama Doble · Baño privado · Sauna · jacuzzi ·</p>
+            <div class="precio">$900.000 / noche</div>
+            <button class="btn-reservar-habitacion" data-habitacion="Habitación Pen House" data-precio="900000">
+                📅 Reservar Ahora
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="foto-habitacion">
+                <img src="./img/339117826.jpg" alt="">
+            </div>
+            <h3>Habitación VIP</h3>
+            <p>Cama Doble · Baño privado · Sauna</p>
+            <div class="precio">$700.000 / noche</div>
+            <button class="btn-reservar-habitacion" data-habitacion="Habitación VIP" data-precio="700000">
+                📅 Reservar Ahora
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="foto-habitacion">
+                <img src="./img/dise-o-de-cuartos-peque-os.25.jpg" alt="">
             </div>
             <h3>Habitación Sencilla</h3>
-            <p>Cama Doble · Baño privado sauna</p>
-            <p class="precio">$700.000 /1 noche</p>
+            <p>Cama Doble · Baño privado ·</p>
+            <div class="precio">$500.000 / noche</div>
+            <button class="btn-reservar-habitacion" data-habitacion="Habitación Sencilla" data-precio="500000">
+                📅 Reservar Ahora
+            </button>
         </div>
 
         <div class="card">
             <div class="foto-habitacion">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop" alt="Habitación Doble">
+                <img src="https://www.motelloscolores.com/wp-content/uploads/2025/07/Los-colores-mazmorra.jpg" alt="">
             </div>
-            <h3>Habitación Doble</h3>
-            <p>2 camas · Aire acondicionado</p>
-            <p class="precio">550.000 / noche</p>
+            <h3>suite presidencial</h3>
+            <p>habitacion roja · Baño privado · Sauna ·jacuzzi </p>
+            <div class="precio">$1.100.000 / noche</div>
+            <button class="btn-reservar-habitacion" data-habitacion="suite presidencial" data-precio="1100000">
+                📅 Reservar Ahora
+            </button>
+        </div>
+         <div class="card">
+            <div class="foto-habitacion">
+                <img src="https://motelesvp.com/img/hotel/live-colors/suite-jacuzzi/suite-jacuzzi.jpg" alt="">
+            </div>
+            <h3>suite imperial</h3>
+            <p>Cama Doble · Baño privado · jacuzzi</p>
+            <div class="precio">$700.000 / noche</div>
+            <button class="btn-reservar-habitacion" data-habitacion="suite imperial" data-precio="700000">
+                📅 Reservar Ahora
+            </button>
+        </div>
+         <div class="card">
+            <div class="foto-habitacion">
+                <img src="https://www.motelmajestic.com/img/gallery/44.jpg" alt="">
+            </div>
+            <h3>suite elite</h3>
+            <p>Cama Doble · Baño privado · Sauna</p>
+            <div class="precio">$700.000 / noche</div>
+            <button class="btn-reservar-habitacion" data-habitacion="suite elite" data-precio="700000">
+                📅 Reservar Ahora
+            </button>
+        </div>
+
+
+
+    </div>
+</section>
+
+<!-- MODAL DE PAGO Y RESERVA -->
+<div id="modalPago" class="modal-pago">
+    <div class="modal-pago-contenido">
+        <button class="btn-cerrar-pago">&times;</button>
+        <h2>💳 Completa tu Reserva y Pago</h2>
+        
+        <!-- Resumen de la reserva -->
+        <div class="resumen-reserva-pago">
+            <h3>Resumen de tu Reserva</h3>
+            <div class="item-resumen">
+                <span>Habitación:</span>
+                <strong id="resHabitacion">-</strong>
+            </div>
+            <div class="item-resumen">
+                <span>Noches:</span>
+                <strong id="resNoches">1</strong>
+            </div>
+            <div class="item-resumen">
+                <span>Precio/Noche:</span>
+                <strong id="resPrecioNoche">$0</strong>
+            </div>
+            <hr>
+            <div class="item-resumen total">
+                <span>Total a pagar:</span>
+                <strong id="resTotal">$0</strong>
+            </div>
+        </div>
+
+        <!-- Formulario de reserva -->
+        <form id="formReservaPago" class="formulario-reserva-pago">
+            <h3>Tus Datos</h3>
+            
+            <div class="campo-pago">
+                <label>Número de Noches *</label>
+                <input type="number" id="nochesInput" min="1" max="30" value="1" required>
+            </div>
+
+            <div class="campo-pago">
+                <label>Nombre Completo *</label>
+                <input type="text" id="nombreInput" placeholder="Juan Pérez García" required>
+            </div>
+
+            <div class="campo-pago">
+                <label>Correo Electrónico *</label>
+                <input type="email" id="emailInput" placeholder="tu@correo.com" required>
+            </div>
+
+            <div class="campo-pago">
+                <label>Teléfono *</label>
+                <input type="tel" id="telefonoInput" placeholder="+57 300 1234567" required>
+            </div>
+
+            <div class="campo-pago">
+                <label>Cédula/Documento *</label>
+                <input type="text" id="documentoInput" placeholder="1234567890" required>
+            </div>
+
+            <h3 style="margin-top: 25px;">Método de Pago</h3>
+
+            <div class="seleccionar-metodo-pago">
+                <button type="button" class="btn-metodo-pago activo" data-metodo="tarjeta">💳 Tarjeta Crédito</button>
+                <button type="button" class="btn-metodo-pago" data-metodo="nequi">📱 Nequi</button>
+                <button type="button" class="btn-metodo-pago" data-metodo="bancolombia">🏦 Bancolombia</button>
+            </div>
+
+            <!-- Método: Tarjeta de Crédito -->
+            <div id="metodoTarjeta" class="metodo-pago-contenedor activo">
+                <div class="campo-pago">
+                    <label>Número de Tarjeta *</label>
+                    <input type="text" id="tarjetaInput" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                </div>
+
+                <div class="fila-dos-campos">
+                    <div class="campo-pago">
+                        <label>Vencimiento (MM/YY) *</label>
+                        <input type="text" id="vencimientoInput" placeholder="12/25" maxlength="5" required>
+                    </div>
+                    <div class="campo-pago">
+                        <label>CVV *</label>
+                        <input type="password" id="cvvInput" placeholder="123" maxlength="4" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Método: Nequi -->
+            <div id="metodoNequi" class="metodo-pago-contenedor">
+                <div class="campo-pago">
+                    <label>Número Celular Registrado en Nequi *</label>
+                    <input type="tel" id="nequiPhone" placeholder="300 1234567" required>
+                </div>
+                <div class="info-pago" style="background: #e3f2fd; border-left: 4px solid #1976d2; padding: 12px; border-radius: 4px; margin-top: 10px; font-size: 0.9em; color: #1976d2;">
+                    📌 Recibirás una notificación en tu Nequi para autorizar el pago
+                </div>
+            </div>
+
+            <!-- Método: Bancolombia -->
+            <div id="metodoBancolombia" class="metodo-pago-contenedor">
+                <div class="campo-pago">
+                    <label>Selecciona el tipo de cuenta *</label>
+                    <select id="bancolombiaTipoCuenta" required>
+                        <option value="">-- Selecciona --</option>
+                        <option value="ahorros">Cuenta de Ahorros</option>
+                        <option value="corriente">Cuenta Corriente</option>
+                    </select>
+                </div>
+                <div class="campo-pago">
+                    <label>Número de Cuenta *</label>
+                    <input type="text" id="bancolombiaNumero" placeholder="Ej: 123456789" required>
+                </div>
+                <div class="info-pago" style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 12px; border-radius: 4px; margin-top: 10px; font-size: 0.9em; color: #ff9800;">
+                    📌 Serás redirigido a Bancolombia para confirmar tu pago de forma segura
+                </div>
+            </div>
+
+            <button type="submit" class="btn-procesar-pago">💳 Procesar Pago</button>
+            <p id="mensajePago" class="mensaje-pago"></p>
+        </form>
+    </div>
+</div>
+
+    </div>
+</section>
+
+    <section class="recompensas">
+        <h2>Programa de Recompensas</h2>
+        <div class="recompensas-content">
+            <p class="intro-recompensas">¡Obtén beneficios exclusivos hospedándote con nosotros!</p>
+            
+            <div class="recompensas-grid">
+                <div class="recompensa-card">
+                    <span class="icono-recompensa">⭐</span>
+                    <h3>3+ Noches</h3>
+                    <p>10% descuento en tu próxima reserva</p>
+                </div>
+                <div class="recompensa-card">
+                    <span class="icono-recompensa">🎁</span>
+                    <h3>7+ Noches</h3>
+                    <p>Desayuno gratis + acceso a Spa</p>
+                </div>
+                <div class="recompensa-card">
+                    <span class="icono-recompensa">👑</span>
+                    <h3>15+ Noches</h3>
+                    <p>Upgrade de habitación gratis</p>
+                </div>
+            </div>
+
+            <form id="formRecompensas" class="form-recompensas">
+                <h3>Verifica tu elegibilidad</h3>
+                <input type="email" placeholder="Tu correo de registro" required>
+                <input type="number" placeholder="Número de noches hospedadas" min="1" required>
+                <button type="submit">Verificar Recompensa</button>
+            </form>
+
+            <p id="mensajeRecompensa" class="mensaje-recompensa"></p>
         </div>
     </section>
 
-    <section class="reserva">
-        <h2>Reservar</h2>
-
-        <form id="formReserva">
-            <input type="text" placeholder="Nombre completo" required>
-            <input type="email" placeholder="Correo" required>
-
-            <select required>
-                <option value="">Tipo de habitación</option>
-                <option>Sencilla</option>
-                <option>Doble</option>
-            </select>
-
-            <label>Fecha de entrada</label>
-            <input type="date" required>
-
-            <label>Fecha de salida</label>
-            <input type="date" required>
-
-            <button type="submit">Reservar ahora</button>
-        </form>
-
-        <p id="mensaje"></p>
+    <!-- SECCIÓN DE UBICACIÓN Y MAPA -->
+    <section class="seccion-ubicacion" id="ubicacion">
+        <div class="ubicacion-contenedor">
+            <h2>Nuestra Ubicación</h2>
+            
+            <div class="ubicacion-layout">
+                <div class="mapa-contenedor">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.123456789!2d-74.0060!3d4.7110!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a1234567%3A0x1234567890abcdef!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sco!4v1707330000000" 
+                             width="100%" 
+                             height="500" 
+                             style="border:0;" 
+                             allowfullscreen="" 
+                             loading="lazy" 
+                             referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="info-ubicacion">
+                    <h3>⭐ Hotel Brisas de Oro</h3>
+                    <div class="detalle-ubicacion">
+                        <p><strong>📍 Dirección:</strong></p>
+                        <p>Calle Principal 123, Paraíso del Caribe, Colombia</p>
+                    </div>
+                    
+                    <div class="detalle-ubicacion">
+                        <p><strong>📞 Contacto:</strong></p>
+                        <p>Teléfono: +57 (1) 234-5678</p>
+                        <p>Email: info@brisasdeoro.com</p>
+                    </div>
+                    
+                    <div class="detalle-ubicacion">
+                        <p><strong>🚗 Cómo Llegar:</strong></p>
+                        <ul class="lista-llegada">
+                            <li>✈️ A 30 minutos del Aeropuerto Internacional</li>
+                            <li>🚕 Servicio de transfer disponible</li>
+                            <li>🅿️ Estacionamiento gratuito</li>
+                            <li>🛣️ Fácil acceso desde la carretera principal</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detalle-ubicacion">
+                        <p><strong>🕐 Horario de Atención:</strong></p>
+                        <p>Lunes - Viernes: 7:00 AM - 10:00 PM</p>
+                        <p>Sábado - Domingo: 8:00 AM - 11:00 PM</p>
+                        <p>Emergencias: 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- BARRA DE CONTACTO Y REDES SOCIALES -->
+    <section class="barra-contacto-sociales" id="contacto">
+        <div class="contacto-sociales-contenido">
+            <div class="bloque-contacto">
+                <h3>📞 Contacto</h3>
+                <p><strong>Teléfono:</strong> +57 (1) 234-5678</p>
+                <p><strong>Email:</strong> info@brisasdeoro.com</p>
+                <p><strong>Ubicación:</strong> Calle Principal 123, Paraíso del Caribe</p>
+            </div>
+
+            <div class="bloque-horario">
+                <h3>🕐 Horario de Atención</h3>
+                <p><strong>Lunes - Viernes:</strong> 7:00 AM - 10:00 PM</p>
+                <p><strong>Sábado - Domingo:</strong> 8:00 AM - 11:00 PM</p>
+                <p><strong>Emergencias:</strong> 24/7</p>
+            </div>
+
+            <div class="bloque-redes">
+                <h3>🌐 Síguenos</h3>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com" target="_blank" class="red-social facebook" title="Facebook">
+                        <span>f</span>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="red-social instagram" title="Instagram">
+                        <span>📷</span>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" class="red-social twitter" title="Twitter">
+                        <span>𝕏</span>
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank" class="red-social tiktok" title="TikTok">
+                        <span>🎵</span>
+                    </a>
+                    <a href="mailto:info@brisasdeoro.com" class="red-social email" title="Email">
+                        <span>✉️</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE POLÍTICAS DE PRIVACIDAD -->
+    <section class="seccion-politicas" id="politicas">
+        <div class="politicas-contenedor">
+            <h2>Políticas de Privacidad y Términos</h2>
+            
+            <div class="politicas-grid">
+                <div class="politica-card">
+                    <h3>🔒 Política de Privacidad</h3>
+                    <p>En <strong>Brisas de Oro Hotel</strong>, la privacidad de nuestros huéspedes es nuestra prioridad. Recopilamos información personal únicamente para proporcionar mejor servicio. Tus datos serán protegidos con encriptación de nivel bancario y nunca serán compartidos con terceros sin tu consentimiento.</p>
+                    <dl class="detalles-politica">
+                        <dt>📋 Información que recopilamos:</dt>
+                        <dd>Nombre, email, teléfono, datos de tarjeta (procesados de forma segura)</dd>
+                        <dt>🔐 Protección de datos:</dt>
+                        <dd>Utilizamos SSL de 256 bits y cumplimos GDPR</dd>
+                        <dt>🗑️ Retención:</dt>
+                        <dd>Los datos se retienen solo mientras sea necesario</dd>
+                    </dl>
+                </div>
+
+                <div class="politica-card">
+                    <h3>📜 Términos y Condiciones</h3>
+                    <p>Al usar nuestros servicios, aceptas nuestros términos. Las reservas son confirmadas por email. Los precios mostrados incluyen impuestos. Te solicitamos ser respetuoso con nuestras instalaciones y personal.</p>
+                    <dl class="detalles-politica">
+                        <dt>💳 Pagos:</dt>
+                        <dd>Aceptamos tarjetas, Nequi y Bancolombia</dd>
+                        <dt>🛏️ Habitaciones:</dt>
+                        <dd>Check-in 3:00 PM, Check-out 11:00 AM</dd>
+                        <dt>⚠️ Cancelación:</dt>
+                        <dd>Gratis hasta 48 horas antes</dd>
+                    </dl>
+                </div>
+
+                <div class="politica-card">
+                    <h3>🚫 Política de Cancelación</h3>
+                    <p>Entendemos que los planes pueden cambiar. Por eso ofrecemos una política flexible para cancelaciones.</p>
+                    <dl class="detalles-politica">
+                        <dt>✅ Cancelación Gratis:</dt>
+                        <dd>Hasta 48 horas antes del check-in</dd>
+                        <dt>⚠️ Cancelación Tardía:</dt>
+                        <dd>Se cobra una noche si cancelas menos de 48h</dd>
+                        <dt>🆘 No-show:</dt>
+                        <dd>Se cobra el total de la reserva</dd>
+                    </dl>
+                </div>
+
+                <div class="politica-card">
+                    <h3>🍪 Política de Cookies</h3>
+                    <p>Nuestro sitio utiliza cookies para mejorar tu experiencia. Las cookies no identifican personalmente, son solo para estadísticas y preferencias.</p>
+                    <dl class="detalles-politica">
+                        <dt>📊 Cookies Esenciales:</dt>
+                        <dd>Necesarias para el funcionamiento del sitio</dd>
+                        <dt>📈 Cookies de Análisis:</dt>
+                        <dd>Para mejorar contenido y servicios</dd>
+                        <dt>⚙️ Configuración:</dt>
+                        <dd>Puedes desactivarlas en tu navegador</dd>
+                    </dl>
+                </div>
+
+                <div class="politica-card">
+                    <h3>♿ Accesibilidad</h3>
+                    <p>Nos comprometemos a hacer nuestro sitio accesible para todos. Si encuentras dificultades, contáctanos inmediatamente.</p>
+                    <dl class="detalles-politica">
+                        <dt>🎯 Acceso Fácil:</dt>
+                        <dd>Navegación intuitiva y clara</dd>
+                        <dt>📱 Responsive:</dt>
+                        <dd>Funciona en todos los dispositivos</dd>
+                        <dt>📧 Soporte:</dt>
+                        <dd>info@brisasdeoro.com</dd>
+                    </dl>
+                </div>
+
+                <div class="politica-card">
+                    <h3>⚡ Cambios en las Políticas</h3>
+                    <p>Nos reservamos el derecho de modificar estas políticas en cualquier momento. Los cambios serán efectivos inmediatamente después de su publicación. Tu uso continuado del sitio indica aceptación de los cambios.</p>
+                    <dl class="detalles-politica">
+                        <dt>📅 Última actualización:</dt>
+                        <dd>Febrero 7, 2026</dd>
+                        <dt>✉️ Contacto:</dt>
+                        <dd>+57 (1) 234-5678</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="politicas-footer">
+                <p><strong>Cualquier pregunta sobre nuestras políticas:</strong></p>
+                <p>📧 Email: info@brisasdeoro.com | 📞 Teléfono: +57 (1) 234-5678</p>
+                <p style="font-size: 0.9em; color: #888; margin-top: 20px;">Brisas de Oro Hotel © 2026 - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </section>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brisas de Oro Hotel. Todos los derechos reservados.</p>
+            <p>Diseñado con ❤️ para brindarte la mejor experiencia de lujo</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
 

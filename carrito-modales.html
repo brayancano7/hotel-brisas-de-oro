@@ -1,0 +1,82 @@
+<!-- Sección de Habitaciones Actualizada con Carrito y Pago -->
+
+    <!-- Modal del Carrito -->
+    <div id="modalCarrito" class="modal-carrito">
+        <div class="carrito-contenido">
+            <div class="carrito-header">
+                <h2>🛒 Tu Carrito</h2>
+                <button id="cerrarCarrito" class="btn-cerrar-carrito">✖</button>
+            </div>
+            <div id="contenidoCarrito" class="contenido-carrito">
+                <p class="carrito-vacio">Tu carrito está vacío</p>
+            </div>
+            <div class="carrito-footer">
+                <div class="carrito-total">
+                    <p>Total:</p>
+                    <p id="totalCarrito" class="monto-total">$0</p>
+                </div>
+                <button id="btnProcederPago" class="btn-proceder-pago">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pago -->
+    <div id="modalPago" class="modal-pago">
+        <div class="pago-contenido">
+            <div class="pago-header">
+                <h2>💳 Método de Pago</h2>
+                <button id="cerrarPago" class="btn-cerrar-pago">✖</button>
+            </div>
+            
+            <div class="resumen-pago">
+                <h4>Resumen de Compra</h4>
+                <div id="resumenItems" class="resumen-items"></div>
+                <div class="resumen-total">
+                    <span>Total a pagar:</span>
+                    <span id="totalPago" class="monto">$0</span>
+                </div>
+            </div>
+
+            <div class="metodos-pago">
+                <h4>Selecciona tu Banco</h4>
+                <div class="bancos-grid">
+                    <button class="banco-btn" data-banco="bancolombia">🏦 Bancolombia</button>
+                    <button class="banco-btn" data-banco="davivienda">🏦 Davivienda</button>
+                    <button class="banco-btn" data-banco="bbva">🏦 BBVA</button>
+                    <button class="banco-btn" data-banco="occidente">🏦 Banco Occidente</button>
+                    <button class="banco-btn" data-banco="santander">🏦 Santander</button>
+                    <button class="banco-btn" data-banco="scotiabank">🏦 Scotiabank</button>
+                </div>
+            </div>
+
+            <div class="datos-pago">
+                <h4>Información de Pago</h4>
+                <form id="formPago">
+                    <div class="form-grupo-pago">
+                        <label>Nombre Completo</label>
+                        <input type="text" id="nombreCliente" placeholder="Juan Pérez" required>
+                    </div>
+                    <div class="form-grupo-pago">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="emailCliente" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="form-grupo-pago">
+                        <label>Número de Tarjeta</label>
+                        <input type="text" id="numeroTarjeta" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    <div class="fila-dos">
+                        <div class="form-grupo-pago">
+                            <label>Vencimiento (MM/AA)</label>
+                            <input type="text" id="vencimiento" placeholder="12/25" maxlength="5" required>
+                        </div>
+                        <div class="form-grupo-pago">
+                            <label>CVV</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-pagar-ahora">✅ Pagar Ahora</button>
+                    <p id="mensajePago" class="mensaje-pago"></p>
+                </form>
+            </div>
+        </div>
+    </div>
