@@ -1,0 +1,38 @@
+<!-- Chatbot Widget -->
+<div id="chatbot" class="chatbot-widget">
+    <!-- Botón flotante para abrir/cerrar -->
+    <div id="chatbotToggle" class="chatbot-toggle">
+        <span class="chatbot-icon">💬</span>
+    </div>
+    
+    <!-- Contenedor del chat -->
+    <div id="chatbotContainer" class="chatbot-container" style="display: none;">
+        <!-- Header -->
+        <div class="chatbot-header">
+            <h3>Asistente Brisas de Oro</h3>
+            <button id="closeChatbot" class="close-chatbot">&times;</button>
+        </div>
+        
+        <!-- Mensajes -->
+        <div id="chatbotMessages" class="chatbot-messages">
+            <div class="message bot-message">
+                <p>¡Hola! 👋 Bienvenido a Brisas de Oro. ¿En qué puedo ayudarte?</p>
+            </div>
+            <div class="message bot-message">
+                <p>Escribe tus preguntas sobre nuestro hotel, habitaciones, servicios, reservas, etc.</p>
+            </div>
+        </div>
+        
+        <!-- Input -->
+        <div class="chatbot-input-area">
+            <input 
+                id="chatbotInput" 
+                type="text" 
+                class="chatbot-input" 
+                placeholder="Escribe tu pregunta..." 
+                autocomplete="off"
+            >
+            <button id="sendBtn" class="send-btn">Enviar</button>
+        </div>
+    </div>
+</div>

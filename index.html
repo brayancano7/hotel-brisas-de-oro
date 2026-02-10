@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <title>Brisas de oro</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
-
-    
-
-    
+    <!-- Chatbot Widget -->
+    <div id="chatbot" class="chatbot-widget">
+        <!-- Botón flotante para abrir/cerrar -->
+        <div id="chatbotToggle" class="chatbot-toggle">
+            <span class="chatbot-icon">💬</span>
+        </div>
+        
+        <!-- Contenedor del chat -->
+        <div id="chatbotContainer" class="chatbot-container" style="display: none;">
+            <!-- Header -->
+            <div class="chatbot-header">
+                <h3>Asistente Brisas de Oro</h3>
+                <button id="closeChatbot" class="close-chatbot">&times;</button>
+            </div>
+            
+            <!-- Mensajes -->
+            <div id="chatbotMessages" class="chatbot-messages">
+                <div class="message bot-message">
+                    <p>¡Hola! 👋 Bienvenido a Brisas de Oro. ¿En qué puedo ayudarte?</p>
+                </div>
+                <div class="message bot-message">
+                    <p>Escribe tus preguntas sobre nuestro hotel, habitaciones, servicios, reservas, etc.</p>
+                </div>
+            </div>
+            
+            <!-- Input -->
+            <div class="chatbot-input-area">
+                <input 
+                    id="chatbotInput" 
+                    type="text" 
+                    class="chatbot-input" 
+                    placeholder="Escribe tu pregunta..." 
+                    autocomplete="off"
+                >
+                <button id="sendBtn" class="send-btn">Enviar</button>
+            </div>
+        </div>
+    </div>
 
     <header>
         <svg class="corona-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
@@ -535,7 +570,7 @@
                         <dt>📱 Responsive:</dt>
                         <dd>Funciona en todos los dispositivos</dd>
                         <dt>📧 Soporte:</dt>
-                        <dd>info@brisasdeoro.com</dd>
+                        <dd>hotelbrisas2000@gmail.com</dd>
                     </dl>
                 </div>
 
@@ -544,16 +579,16 @@
                     <p>Nos reservamos el derecho de modificar estas políticas en cualquier momento. Los cambios serán efectivos inmediatamente después de su publicación. Tu uso continuado del sitio indica aceptación de los cambios.</p>
                     <dl class="detalles-politica">
                         <dt>📅 Última actualización:</dt>
-                        <dd>Febrero 7, 2026</dd>
+                        <dd>Febrero 9, 2026</dd>
                         <dt>✉️ Contacto:</dt>
-                        <dd>+57 (1) 234-5678</dd>
+                        <dd>+57 3017090039</dd>
                     </dl>
                 </div>
             </div>
 
             <div class="politicas-footer">
                 <p><strong>Cualquier pregunta sobre nuestras políticas:</strong></p>
-                <p>📧 Email: info@brisasdeoro.com | 📞 Teléfono: +57 (1) 234-5678</p>
+                <p>📧 Email: hotelbrisas2000@gmail.com | 📞 Teléfono: +57 3017090039</p>
                 <p style="font-size: 0.9em; color: #888; margin-top: 20px;">Brisas de Oro Hotel © 2026 - Todos los derechos reservados</p>
             </div>
         </div>
@@ -566,8 +601,7 @@
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html>
+    <script src="chatbot.js"></script>
 </body>
 </html>
 
